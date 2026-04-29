@@ -1092,3 +1092,619 @@ a.partner-name {
   transition: opacity var(--transition), color var(--transition);
 }
 a.partner-name:hover { opacity: 1; color: var(--forest); }
+
+/* ═══════════════════════════════════════════════════════════════
+   TABLET BREAKPOINT — 1024px
+   Fills the gap between desktop (1100px) and mobile (768px)
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  /* Nav */
+  .nav-inner { padding: 0 1.5rem; }
+  .logo-name { font-size: 1rem; }
+  .nav-menu > a,
+  .nav-menu > .dropdown > a { padding: 8px 9px; font-size: 0.76rem; }
+  .nav-give { padding: 9px 16px !important; }
+
+  /* Hero */
+  .hero { min-height: 72vh; }
+  .hero-content { padding: 5rem 1.5rem 4rem; }
+  .hero h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); max-width: 560px; }
+  .hero-floating-stats { right: 1.5rem; gap: 0.8rem; }
+  .hero-stat-card { padding: 12px 16px; }
+  .hero-stat-card .big { font-size: 1.6rem; }
+
+  /* Grids */
+  .card-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .pillar-grid  { grid-template-columns: repeat(2, 1fr); }
+  .impact-row   { grid-template-columns: repeat(2, 1fr); }
+  .card-grid-2  { grid-template-columns: 1fr 1fr; }
+
+  /* Splits */
+  .split { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  .split-img { height: 380px; }
+  .split-img-accent { width: 140px; height: 100px; right: -1rem; bottom: -1rem; }
+
+  /* Donate layout */
+  .donate-layout { grid-template-columns: 1fr 360px; gap: 2rem; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem; }
+  .footer-grid .footer-col:last-child { grid-column: 1 / -1; }
+
+  /* Sections */
+  .section { padding: 4.5rem 1.5rem; }
+
+  /* Partners page */
+  .card-grid-3.partners-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Events */
+  .event-card { flex-direction: row; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ENHANCED MOBILE — 768px and below (full overhaul)
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* === ROOT ADJUSTMENTS === */
+  :root {
+    --max-w: 100%;
+  }
+  html { font-size: 15px; }
+
+  /* === UTILITY BAR === */
+  .utility-bar { display: none; }
+
+  /* === NAVBAR === */
+  .navbar { position: sticky; top: 0; }
+  .nav-inner { height: 68px; padding: 0 1.2rem; }
+  .logo-mark { width: 42px; height: 42px; font-size: 1.2rem; }
+  .logo-name  { font-size: 0.9rem; }
+  .logo-tagline { display: none; }
+  .nav-hamburger { display: flex; }
+  .nav-menu { display: none; }
+  .nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 68px; left: 0; right: 0; bottom: 0;
+    background: #fff;
+    padding: 1.2rem 1.5rem 2rem;
+    box-shadow: var(--shadow-lg);
+    z-index: 300;
+    overflow-y: auto;
+    gap: 2px;
+    border-top: 3px solid var(--gold);
+  }
+  .nav-menu.open > a,
+  .nav-menu.open > .dropdown > a {
+    font-size: 0.95rem;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border-light);
+    border-radius: 0;
+    display: block;
+  }
+  .nav-menu.open .drop-panel {
+    position: static;
+    opacity: 1; transform: none;
+    box-shadow: none; border-top: none;
+    background: var(--cream);
+    padding: 4px 0 4px 1rem;
+    margin-bottom: 4px;
+    border-radius: var(--radius);
+  }
+  .nav-menu.open .drop-panel a { padding: 10px 14px; font-size: 0.88rem; }
+  .nav-give { margin: 1rem 0 0; width: 100%; text-align: center; border-radius: var(--radius) !important; padding: 14px !important; }
+
+  /* === HERO === */
+  .hero { min-height: 85vh; align-items: flex-end; }
+  .hero-content { padding: 0 1.2rem 3rem; }
+  .hero h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); margin-bottom: 1rem; }
+  .hero .hero-lead { font-size: 0.92rem; max-width: 100%; margin-bottom: 1.6rem; }
+  .hero-ctas { gap: 0.8rem; }
+  .hero-ctas .btn { padding: 13px 20px; font-size: 0.82rem; flex: 1 1 auto; text-align: center; justify-content: center; }
+  .hero-badge { font-size: 0.65rem; }
+  .hero-floating-stats { display: none; }
+
+  /* PAGE HERO */
+  .page-hero { height: 220px; }
+  .page-hero-content h1 { font-size: 1.7rem; }
+  .page-hero-content { padding: 0 1.2rem 1.8rem; }
+
+  /* === SECTIONS === */
+  .section { padding: 3rem 1.2rem; }
+  .section-sm { padding: 2.5rem 1.2rem; }
+  .container { padding: 0; }
+  .section-title { font-size: clamp(1.5rem, 5vw, 2rem); }
+
+  /* === GRIDS → SINGLE COLUMN === */
+  .card-grid-3,
+  .card-grid-2 { grid-template-columns: 1fr; gap: 1rem; }
+  .pillar-grid  { grid-template-columns: 1fr; }
+  .impact-row   { grid-template-columns: repeat(2, 1fr); }
+  .values-grid  { grid-template-columns: 1fr; }
+  .form-row-2   { grid-template-columns: 1fr; }
+
+  /* === PILLAR STRIP === */
+  .pillar-item { padding: 1.8rem 1.5rem; border-right: none; border-bottom: 1px solid var(--border); }
+  .pillar-item:last-child { border-bottom: none; }
+
+  /* === IMPACT STRIP === */
+  .impact-strip { padding: 3rem 1.2rem; }
+  .impact-num   { font-size: 2.4rem; }
+  .impact-item  { padding: 1.2rem; }
+
+  /* === SPLIT SECTIONS === */
+  .split,
+  .split.reverse { grid-template-columns: 1fr; gap: 0; direction: ltr; }
+  .split-img-wrap { order: -1; }
+  .split-img { height: 260px; border-radius: var(--radius) var(--radius) 0 0; }
+  .split-img-accent { display: none; }
+  .split-badge { top: -0.8rem; left: 1rem; font-size: 0.9rem; padding: 8px 12px; }
+  .split > div:last-child,
+  .split.reverse > div:last-child { padding: 1.8rem 1.2rem; background: #fff; border-radius: 0 0 var(--radius) var(--radius); box-shadow: var(--shadow-sm); }
+
+  /* === BUTTONS === */
+  .btn     { padding: 12px 20px; font-size: 0.82rem; }
+  .btn-lg  { padding: 14px 24px; font-size: 0.88rem; }
+  .btn-sm  { padding: 9px 16px;  font-size: 0.76rem; }
+
+  /* === CARDS === */
+  .card { border-radius: var(--radius); }
+  .card-img { height: 190px; }
+
+  /* === EVENT CARDS === */
+  .event-card { flex-direction: row; gap: 1rem; }
+
+  /* === TESTIMONIAL === */
+  .testimonial-section { padding: 3.5rem 1.2rem; }
+  .testimonial-inner blockquote { font-size: 1.05rem; }
+
+  /* === DONATE BANNER === */
+  .donate-banner { padding: 3rem 1.2rem; }
+  .donate-banner-inner { flex-direction: column; gap: 1.5rem; }
+  .donate-banner h2 { font-size: 1.5rem; }
+  .donate-banner .btn { width: 100%; text-align: center; justify-content: center; }
+
+  /* === DONATE PAGE === */
+  .donate-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .donate-form-card { padding: 1.5rem 1.2rem; }
+  .donate-sidebar-card { position: static; }
+  .amount-grid,
+  .amount-row { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+  .freq-tabs { }
+  .freq-tab { font-size: 0.74rem; padding: 9px 4px; }
+
+  /* === PARTNERS PAGE === */
+  .partner-card { padding: 1.5rem; }
+
+  /* === FAQ === */
+  .faq-q { font-size: 0.88rem; padding: 1rem 1.2rem; }
+  .faq-a-inner { padding: 0 1.2rem 1rem; font-size: 0.85rem; }
+
+  /* === GALLERY === */
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+
+  /* === FOOTER === */
+  .site-footer { padding: 3rem 1.2rem 0; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.8rem; font-size: 0.72rem; }
+  .footer-bottom-links { flex-wrap: wrap; gap: 0.8rem; }
+  .footer-social { gap: 6px; }
+  .footer-social a { width: 34px; height: 34px; }
+
+  /* === LEGAL PAGES === */
+  .lw h2, .legal-wrap h2 { font-size: 1.1rem; }
+  .toc ol { columns: 1; }
+
+  /* === PARTNERS STRIP (homepage) === */
+  .partners-row { gap: 1rem 2rem; }
+
+  /* === CONTACT === */
+  #cf-first, #cf-last { }
+
+  /* === NEWS === */
+  .news-card .card-img { height: 170px; }
+
+  /* === NEWSLETTER === */
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input { min-width: unset; max-width: 100%; }
+  .newsletter-form .btn { width: 100%; justify-content: center; }
+
+  /* === GET INVOLVED SPONSOR TIERS === */
+  .card-grid-3 > .card[style*="scale(1.03)"] { transform: scale(1); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SMALL MOBILE — 480px and below
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+
+  /* Hero */
+  .hero { min-height: 92vh; }
+  .hero h1 { font-size: 1.75rem; line-height: 1.2; }
+  .hero-ctas { flex-direction: column; }
+  .hero-ctas .btn { width: 100%; }
+
+  /* Sections */
+  .section { padding: 2.5rem 1rem; }
+  .section-sm { padding: 2rem 1rem; }
+
+  /* Impact strip — single column on very small screens */
+  .impact-row { grid-template-columns: 1fr 1fr; }
+  .impact-num  { font-size: 2rem; }
+
+  /* Gallery — single column */
+  .gallery-grid { grid-template-columns: 1fr; }
+
+  /* Donate amounts */
+  .amount-row,
+  .amount-grid { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
+  .amt-btn { padding: 11px 6px; font-size: 0.88rem; }
+
+  /* Split image height */
+  .split-img { height: 220px; }
+
+  /* Page hero */
+  .page-hero { height: 180px; }
+  .page-hero-content h1 { font-size: 1.4rem; }
+
+  /* Cards */
+  .card-img { height: 175px; }
+
+  /* Buttons in split */
+  .split > div:last-child .btn,
+  .split.reverse > div:last-child .btn { width: 100%; justify-content: center; }
+
+  /* Footer brand */
+  .logo-words { display: none; }
+
+  /* Partners page cards */
+  .partner-logo-wrap { width: 52px; height: 52px; font-size: 1.5rem; }
+}
+
+/* ── Hamburger → X animation ───────────────────────────────── */
+.nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ── Skip-to-content link ───────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--gold);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 0 0 var(--radius) var(--radius);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  z-index: 9999;
+  transition: top 0.2s;
+  text-decoration: none;
+}
+.skip-link:focus { top: 0; }
+
+/* ── Focus visible styles ───────────────────────────────────── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TABLET BREAKPOINT — 1024px
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  /* Nav — shrink gaps */
+  .nav-menu > a,
+  .nav-menu > .dropdown > a { padding: 8px 9px; font-size: 0.76rem; }
+  .nav-give { padding: 9px 16px !important; }
+  .nav-inner { height: 70px; }
+  .logo-name  { font-size: 1rem; }
+
+  /* Hero */
+  .hero-content { padding: 5rem 2rem 3rem; }
+  .hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); }
+  .hero-floating-stats { right: 2rem; }
+  .hero-stat-card { padding: 12px 16px; }
+  .hero-stat-card .big { font-size: 1.5rem; }
+
+  /* Pillar strip */
+  .pillar-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Impact strip */
+  .impact-row { grid-template-columns: repeat(2, 1fr); }
+  .impact-item:nth-child(2) { border-right: none; }
+
+  /* Cards */
+  .card-grid-3 { grid-template-columns: repeat(2, 1fr); }
+
+  /* Split layout */
+  .split { grid-template-columns: 1fr; gap: 2.5rem; }
+  .split.reverse { direction: ltr; }
+  .split-img { height: 380px; }
+  .split-img-accent { width: 150px; height: 110px; right: -1rem; bottom: -1rem; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-brand { grid-column: 1 / -1; }
+
+  /* Donate page */
+  .donate-layout { grid-template-columns: 1fr; }
+  .donate-sidebar-card { position: static; }
+
+  /* Partner cards */
+  .card-grid-3.partners { grid-template-columns: repeat(2, 1fr); }
+
+  /* Sections */
+  .section { padding: 4rem 2rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE OVERHAUL — 768px and below
+   Complete mobile-first rewrite of all components
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Base ─────────────────────────────────────────────────── */
+  html { font-size: 15px; }
+  body { overflow-x: hidden; }
+  .section      { padding: 3rem 1.2rem; }
+  .section-sm   { padding: 2.5rem 1.2rem; }
+  .container    { padding: 0 1.2rem; }
+
+  /* ── Utility bar — hidden on mobile ──────────────────────── */
+  .utility-bar  { display: none; }
+
+  /* ── Navbar ──────────────────────────────────────────────── */
+  .navbar .nav-inner { height: 64px; padding: 0 1.2rem; }
+  .logo-name    { font-size: 0.9rem; white-space: nowrap; }
+  .logo-tagline { display: none; }
+  .logo-mark    { width: 40px; height: 40px; font-size: 1.1rem; }
+  .nav-menu     { display: none; }
+  .nav-hamburger{ display: flex; }
+
+  /* Mobile nav open state */
+  .nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 64px; left: 0; right: 0; bottom: 0;
+    background: #fff;
+    padding: 1rem 1.2rem 2rem;
+    overflow-y: auto;
+    z-index: 200;
+    gap: 2px;
+    box-shadow: 0 8px 32px rgba(27,58,45,0.15);
+  }
+  .nav-menu.open > a,
+  .nav-menu.open > .dropdown > a {
+    padding: 14px 12px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border-light);
+    border-radius: 0;
+    display: block;
+  }
+  .nav-menu.open .nav-give {
+    margin: 1rem 0 0;
+    padding: 14px 22px !important;
+    border-radius: var(--radius) !important;
+    text-align: center;
+  }
+  .nav-menu.open .drop-panel {
+    position: static;
+    opacity: 1;
+    pointer-events: all;
+    transform: none;
+    box-shadow: none;
+    border-top: none;
+    background: var(--cream);
+    border-radius: var(--radius);
+    padding: 4px 0;
+    margin: 4px 0 8px;
+  }
+  .nav-menu.open .drop-panel a {
+    padding: 10px 24px;
+    font-size: 0.86rem;
+  }
+
+  /* ── Typography ──────────────────────────────────────────── */
+  .section-title { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .section-sub   { font-size: 0.92rem; }
+  h1             { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+
+  /* ── Hero ────────────────────────────────────────────────── */
+  .hero          { min-height: 100svh; align-items: flex-end; }
+  .hero-content  { padding: 2rem 1.2rem 3.5rem; }
+  .hero h1       { font-size: clamp(1.9rem, 7vw, 2.6rem); max-width: 100%; }
+  .hero .hero-lead { font-size: 0.93rem; max-width: 100%; }
+  .hero-ctas     { flex-direction: column; gap: 0.75rem; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+  .hero-floating-stats { display: none; }
+  .hero-badge    { font-size: 0.65rem; }
+  .hero-overlay  {
+    background: linear-gradient(
+      to top,
+      rgba(18,40,25,0.96) 0%,
+      rgba(27,58,45,0.75) 50%,
+      rgba(27,58,45,0.3) 100%
+    );
+  }
+
+  /* ── Page Hero (inner pages) ─────────────────────────────── */
+  .page-hero     { height: 220px; }
+  .page-hero-content h1 { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .page-hero-content { padding: 0 1.2rem 1.8rem; }
+
+  /* ── Buttons ─────────────────────────────────────────────── */
+  .btn-lg { padding: 14px 28px; font-size: 0.88rem; }
+
+  /* ── Pillar strip ────────────────────────────────────────── */
+  .pillar-grid { grid-template-columns: 1fr; }
+  .pillar-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .pillar-item:last-child { border-bottom: none; }
+  .pillar-item { padding: 1.8rem 1.4rem; }
+
+  /* ── Impact strip ────────────────────────────────────────── */
+  .impact-row   { grid-template-columns: 1fr 1fr; }
+  .impact-item  { padding: 1.5rem 1rem; border-right: none; }
+  .impact-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.07); }
+  .impact-num   { font-size: 2.2rem; }
+
+  /* ── Cards ───────────────────────────────────────────────── */
+  .card-grid-3,
+  .card-grid-2  { grid-template-columns: 1fr; gap: 1rem; }
+
+  /* ── Split layout ────────────────────────────────────────── */
+  .split        { grid-template-columns: 1fr; gap: 2rem; }
+  .split.reverse{ direction: ltr; }
+  .split-img    { height: 260px; border-radius: var(--radius); }
+  .split-img-accent { display: none; }
+  .split-badge  { top: -0.8rem; left: 1rem; font-size: 0.9rem; padding: 8px 14px; }
+  .values-grid  { grid-template-columns: 1fr; }
+  .check-list   { gap: 0.7rem; }
+
+  /* ── Events ──────────────────────────────────────────────── */
+  .event-card   { flex-direction: column; gap: 0.8rem; }
+
+  /* ── Testimonial ─────────────────────────────────────────── */
+  .testimonial-section { padding: 3.5rem 1.2rem; }
+  .testimonial-inner blockquote { font-size: 1.1rem; }
+
+  /* ── Donate banner ───────────────────────────────────────── */
+  .donate-banner { padding: 3rem 1.2rem; }
+  .donate-banner-inner { flex-direction: column; text-align: center; }
+  .donate-banner h2 { font-size: 1.4rem; }
+  .donate-banner .btn { width: 100%; justify-content: center; }
+
+  /* ── Donate page ─────────────────────────────────────────── */
+  .donate-layout        { grid-template-columns: 1fr; }
+  .donate-form-card     { padding: 1.5rem 1.2rem; }
+  .donate-sidebar-card  { position: static; }
+  .amount-row           { grid-template-columns: repeat(3, 1fr); }
+  .form-row-2           { grid-template-columns: 1fr; }
+
+  /* ── Partners strip ──────────────────────────────────────── */
+  .partners-row { gap: 1.5rem 2rem; }
+  .partner-name { font-size: 0.78rem; }
+
+  /* ── Newsletter ──────────────────────────────────────────── */
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input { max-width: 100% !important; min-width: 0 !important; }
+  .newsletter-form .btn  { width: 100%; justify-content: center; }
+
+  /* ── Footer ──────────────────────────────────────────────── */
+  .site-footer { padding: 3rem 1.2rem 0; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-brand p { font-size: 0.82rem; }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+    font-size: 0.72rem;
+    padding: 1.4rem 0;
+  }
+  .footer-bottom-links { flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
+
+  /* ── FAQ page ────────────────────────────────────────────── */
+  .faq-q { font-size: 0.86rem; padding: 1rem 1.1rem; }
+
+  /* ── Gallery ─────────────────────────────────────────────── */
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .gallery-filter { gap: 0.4rem; }
+  .filter-btn { padding: 6px 12px; font-size: 0.72rem; }
+
+  /* ── Partners page ───────────────────────────────────────── */
+  .volunteer-hero { padding: 1.8rem 1.4rem; }
+  .partner-card   { padding: 1.5rem; }
+
+  /* ── Get-involved sponsor cards ──────────────────────────── */
+  .card-grid-3 > .card[style*="scale(1.03)"] { transform: scale(1); }
+
+  /* ── Programs — clean energy sub-grid ───────────────────── */
+  .card-grid-3[style*="rgba(255,255,255,0.08)"] { grid-template-columns: 1fr; }
+
+  /* ── Toast ───────────────────────────────────────────────── */
+  .toast { left: 1rem; right: 1rem; bottom: 1rem; max-width: 100%; }
+
+  /* ── Misc utilities ──────────────────────────────────────── */
+  .hero-badge { display: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SMALL MOBILE — 480px and below
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .impact-row   { grid-template-columns: 1fr 1fr; }
+  .amount-row   { grid-template-columns: 1fr 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .partner-card { flex-direction: column; }
+  .logo-name    { font-size: 0.82rem; }
+  .logo-mark    { width: 36px; height: 36px; font-size: 1rem; }
+  .hero h1      { font-size: clamp(1.7rem, 8vw, 2.2rem); }
+  .page-hero    { height: 190px; }
+  .split-img    { height: 220px; }
+  .tab-row, .freq-tabs { flex-wrap: wrap; }
+  .freq-tab, .tab-btn  { flex: 1 1 45%; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE UX POLISH — touch targets, tap highlights, scroll
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Minimum 44px tap targets on mobile for all interactive elements */
+@media (max-width: 768px) {
+  .btn, button, [role="tab"], [role="menuitem"],
+  .amt-btn, .filter-btn, .faq-q, .freq-tab, .tab-btn {
+    min-height: 44px;
+  }
+  a { -webkit-tap-highlight-color: rgba(201,146,42,0.15); }
+  /* Smooth scrolling containers */
+  .drop-panel, .nav-menu.open { -webkit-overflow-scrolling: touch; }
+  /* Remove hover states that look broken on touch */
+  .pillar-item:hover { background: transparent; }
+  .pillar-item:hover * { color: inherit !important; }
+  .pillar-item:hover .pillar-cta { color: var(--gold) !important; }
+  .pillar-item:hover .pillar-ico { background: var(--forest); }
+  /* Card hover — reduce on mobile */
+  .card:hover, .news-card:hover, .partner-card:hover { transform: none; }
+  /* Donate form full-width */
+  .stripe-card-wrap { padding: 12px 10px; }
+  .trust-badges { justify-content: center; }
+  /* Events cards */
+  .event-card { padding: 1.2rem; }
+  .event-date-box .day { font-size: 1.5rem; }
+  /* Section headings centred on mobile where appropriate */
+  .section > .container > div:first-child,
+  .impact-row .impact-item { text-align: center; }
+  /* Partners page */
+  .partner-logo-wrap { width: 52px; height: 52px; font-size: 1.4rem; }
+  /* Fix forms on iOS — prevent zoom on focus */
+  input, select, textarea { font-size: 16px !important; }
+}
+
+/* ── Focus-visible styles — keyboard accessibility ─────────────── */
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 3px rgba(201,146,42,0.2);
+}

@@ -1,7 +1,12 @@
-/* Shared navigation — Pure Joy Empowerment Uganda v2.1 */
+/* ═══════════════════════════════════════════════════════════════
+   PURE JOY EMPOWERMENT — SHARED NAV  v2.1
+   Includes: skip-link, utility bar, sticky navbar, mobile menu
+═══════════════════════════════════════════════════════════════ */
 (function() {
   const navHTML = `
-  <div class="utility-bar">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="utility-bar" aria-hidden="true">
     <div class="utility-inner">
       <div class="utility-left">
         <a href="contact.html"><span>📍</span> Jinja City, Uganda</a>
@@ -15,10 +20,10 @@
         <a href="contact.html">Contact</a>
         <div class="utility-divider"></div>
         <div class="social-bar">
-          <a href="https://facebook.com" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">f</a>
-          <a href="https://instagram.com" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">📷</a>
-          <a href="https://youtube.com" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube">▶</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener" title="X/Twitter" aria-label="Twitter">✕</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">✕</a>
         </div>
       </div>
     </div>
@@ -34,13 +39,14 @@
         </div>
       </a>
 
-      <div class="nav-menu" id="nav-menu" role="menubar">
+      <div class="nav-menu" id="nav-menu" role="menubar" aria-label="Main menu">
+
         <div class="dropdown" role="none">
-          <a href="about.html" role="menuitem" aria-haspopup="true">About ▾</a>
+          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">About ▾</a>
           <div class="drop-panel" role="menu" aria-label="About submenu">
             <a href="about.html#story"      role="menuitem"><span class="dp-icon">📖</span> Our Story</a>
             <a href="about.html#mission"    role="menuitem"><span class="dp-icon">🎯</span> Mission &amp; Vision</a>
-            <a href="about.html#leadership" role="menuitem"><span class="dp-icon">👥</span> Leadership Team</a>
+            <a href="about.html#leadership" role="menuitem"><span class="dp-icon">👥</span> Leadership</a>
             <a href="about.html#values"     role="menuitem"><span class="dp-icon">✝</span> Our Values</a>
             <div class="drop-divider"></div>
             <a href="partners.html"         role="menuitem"><span class="dp-icon">🤝</span> Our Partners</a>
@@ -49,13 +55,13 @@
         </div>
 
         <div class="dropdown" role="none">
-          <a href="programs.html" role="menuitem" aria-haspopup="true">Programs ▾</a>
+          <a href="programs.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Programs ▾</a>
           <div class="drop-panel" role="menu" aria-label="Programs submenu">
             <a href="programs.html#boys"       role="menuitem"><span class="dp-icon">👦</span> Boys Emancipation</a>
-            <a href="programs.html#women"      role="menuitem"><span class="dp-icon">👩‍💼</span> Women Empowerment</a>
+            <a href="programs.html#women"      role="menuitem"><span class="dp-icon">👩</span> Women Empowerment</a>
             <a href="programs.html#street"     role="menuitem"><span class="dp-icon">🏘</span> Street Children</a>
             <a href="programs.html#vocational" role="menuitem"><span class="dp-icon">🔧</span> Vocational Training</a>
-            <a href="programs.html#nutrition"  role="menuitem"><span class="dp-icon">🥗</span> Nutrition Program</a>
+            <a href="programs.html#nutrition"  role="menuitem"><span class="dp-icon">🥗</span> Nutrition</a>
             <div class="drop-divider"></div>
             <a href="programs.html#energy"     role="menuitem"><span class="dp-icon">⚡</span> Clean Energy</a>
           </div>
@@ -64,7 +70,7 @@
         <a href="orphanage.html" role="menuitem">Orphanage</a>
 
         <div class="dropdown" role="none">
-          <a href="get-involved.html" role="menuitem" aria-haspopup="true">Get Involved ▾</a>
+          <a href="get-involved.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Get Involved ▾</a>
           <div class="drop-panel" role="menu" aria-label="Get Involved submenu">
             <a href="get-involved.html#volunteer" role="menuitem"><span class="dp-icon">✈</span> Volunteer</a>
             <a href="get-involved.html#sponsor"   role="menuitem"><span class="dp-icon">❤</span> Sponsor a Child</a>
@@ -73,12 +79,15 @@
           </div>
         </div>
 
-        <a href="events.html" role="menuitem">Events</a>
-        <a href="news.html"   role="menuitem">News</a>
-        <a href="donate.html" class="nav-give" role="menuitem" aria-label="Donate now">❤ Give Now</a>
+        <a href="events.html"  role="menuitem">Events</a>
+        <a href="news.html"    role="menuitem">News</a>
+        <a href="donate.html"  class="nav-give" role="menuitem" aria-label="Donate now">❤ Give Now</a>
       </div>
 
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+      <button class="nav-hamburger" id="nav-hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -88,9 +97,13 @@
   wrapper.innerHTML = navHTML;
   document.body.insertBefore(wrapper, document.body.firstChild);
 
-  /* Active link */
+  // Mark active link
   const page = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-menu a').forEach(a => {
-    if (a.getAttribute('href') === page) a.classList.add('active');
+  document.querySelectorAll('.nav-menu a[href]').forEach(a => {
+    const href = (a.getAttribute('href') || '').split('#')[0].split('?')[0];
+    if (href === page) {
+      a.classList.add('active');
+      a.setAttribute('aria-current', 'page');
+    }
   });
 })();

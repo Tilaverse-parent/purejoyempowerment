@@ -1,0 +1,19 @@
+{
+  "name": "purejoy-empowerment-uganda",
+  "version": "2.0.0",
+  "description": "Official website for Pure Joy Empowerment Uganda NGO",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "stripe": "^14.21.0"
+  },
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "lint": "echo 'No build step — static HTML/CSS/JS'",
+    "test": "echo 'Add integration tests here'"
+  },
+  "keywords": ["ngo", "uganda", "empowerment", "stripe", "donations"],
+  "license": "UNLICENSED"
+}

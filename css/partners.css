@@ -1,0 +1,49 @@
+/* ── Partners page styles ── */
+.partner-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+}
+.partner-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--border); }
+.partner-logo-wrap {
+  width: 64px; height: 64px;
+  background: var(--cream);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+.partner-tag {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 0.67rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.tag-agro    { background: #EAF3DE; color: #3B6D11; }
+.tag-vol     { background: #E1F5EE; color: #0F6E56; }
+.tag-admin   { background: #E6F1FB; color: #185FA5; }
+.tag-market  { background: #FAEEDA; color: #854F0B; }
+.tag-energy  { background: #FCEBEB; color: #A32D2D; }
+.tag-pending { background: #F1EFE8; color: #5F5E5A; }
+.partner-card h3 { font-size: 1.05rem; color: var(--forest); }
+.partner-card p  { font-size: 0.84rem; color: var(--text-muted); line-height: 1.68; }
+.partner-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.78rem; font-weight: 700;
+  color: var(--gold); text-transform: uppercase; letter-spacing: 0.07em;
+  transition: gap var(--transition);
+}
+.partner-link:hover { gap: 9px; }
+.partner-card:hover .partner-link { gap: 9px; }
+.volunteer-hero { background: var(--forest); border-radius: var(--radius-lg); padding: 2.5rem; color: #fff; }
+.volunteer-hero h2 { color: #fff; margin-bottom: 0.8rem; }
+.volunteer-hero p  { color: rgba(255,255,255,0.78); font-size: 0.92rem; line-height: 1.72; }

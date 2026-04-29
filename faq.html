@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions about Pure Joy Empowerment Uganda — donations, volunteering, sponsorship, and our programmes.">
+  <meta property="og:title" content="FAQ — Pure Joy Empowerment Uganda">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&q=80">
+  <meta name="theme-color" content="#1B3A2D">
+  <title>Frequently Asked Questions — Pure Joy Empowerment Uganda</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .faq-cat { margin-bottom: 3rem; }
+    .faq-cat-title {
+      font-size: .72rem; text-transform: uppercase; letter-spacing: .16em; font-weight: 700;
+      color: var(--gold); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 8px;
+    }
+    .faq-cat-title::after { content:''; flex:1; height:1px; background:var(--border); }
+    .faq-item {
+      border: 1px solid var(--border-light); border-radius: var(--radius);
+      margin-bottom: .6rem; overflow: hidden; transition: border-color var(--transition);
+    }
+    .faq-item:hover { border-color: var(--border); }
+    .faq-item.open { border-color: var(--gold); }
+    .faq-q {
+      width: 100%; padding: 1.1rem 1.4rem; background: #fff; display: flex;
+      align-items: center; justify-content: space-between; gap: 1rem;
+      cursor: pointer; font-family: 'Nunito Sans', sans-serif;
+      font-size: .92rem; font-weight: 700; color: var(--forest); text-align: left;
+      border: none;
+    }
+    .faq-q:hover { background: var(--cream); }
+    .faq-item.open .faq-q { background: var(--gold-pale); }
+    .faq-arrow { font-size: 1rem; transition: transform .25s; flex-shrink: 0; color: var(--gold); }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height .32s ease, padding .32s ease;
+      background: #fff;
+    }
+    .faq-a-inner {
+      padding: 0 1.4rem 1.2rem;
+      font-size: .88rem; color: var(--text-body); line-height: 1.82;
+    }
+    .faq-a-inner a { color: var(--gold); }
+    .faq-a-inner ul { margin: .5rem 0 .5rem 1.2rem; }
+    .faq-a-inner ul li { list-style: disc; margin-bottom: .3rem; }
+    .faq-item.open .faq-a { max-height: 600px; }
+    .search-wrap { position: relative; max-width: 520px; margin: 0 auto 3rem; }
+    .search-wrap input {
+      width: 100%; padding: 13px 18px 13px 44px;
+      border: 2px solid var(--border); border-radius: var(--radius);
+      font-size: .95rem; font-family: 'Nunito Sans', sans-serif; color: var(--text-body);
+      background: #fff; transition: border-color var(--transition);
+    }
+    .search-wrap input:focus { border-color: var(--gold); outline: none; }
+    .search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); font-size: 1.1rem; pointer-events: none; }
+    .no-results { text-align: center; padding: 2rem; font-size: .9rem; color: var(--text-muted); display: none; }
+  </style>
+</head>
+<body>
+<script src="js/nav.js"></script>
+
+<div class="page-hero" style="height:280px;">
+  <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1400&q=80&auto=format&fit=crop" alt="Pure Joy children" class="hero-bg-img" loading="eager">
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a> › FAQ</div>
+    <h1>Frequently Asked Questions</h1>
+  </div>
+</div>
+
+<section class="section" style="background:var(--cream);">
+  <div class="container" style="max-width:860px;">
+    <div style="text-align:center;max-width:600px;margin:0 auto 2.5rem;">
+      <span class="eyebrow">Got Questions?</span>
+      <h2 class="section-title">We Have Answers</h2>
+      <p class="section-sub">Can't find what you're looking for? <a href="contact.html" style="color:var(--gold);">Contact us directly</a> — we respond within 48 hours.</p>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon" aria-hidden="true">🔍</span>
+      <input type="search" id="faq-search" placeholder="Search questions…" aria-label="Search frequently asked questions">
+    </div>
+
+    <div id="faq-body">
+
+      <!-- DONATIONS -->
+      <div class="faq-cat" data-cat="donations">
+        <div class="faq-cat-title">Donations &amp; Giving</div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How do I donate to Pure Joy?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Visit our <a href="donate.html">Donate page</a> to give securely online using a credit or debit card. You can choose a one-time gift, a monthly recurring donation, or an annual gift. We accept all major cards through <strong>Stripe</strong>, a trusted, PCI DSS-certified payment processor. For bank transfers or other methods, email <a href="mailto:donations@purejoyempowerment.org">donations@purejoyempowerment.org</a>.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is my donation secure?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Yes. All payments are processed by <strong>Stripe, Inc.</strong>, which is certified to PCI DSS Level 1 — the highest standard for payment security. Pure Joy never stores or sees your full card number, CVV, or bank details. All data is transmitted via 256-bit HTTPS encryption.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Where does my donation go?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            100% of your donation goes directly to our programmes in Uganda, covering:
+            <ul>
+              <li>Housing, food, and care for children in our home</li>
+              <li>School fees, uniforms, books, and tutoring</li>
+              <li>Women's vocational training and enterprise development</li>
+              <li>Clean energy equipment manufacturing</li>
+              <li>Nutrition and feeding programmes</li>
+              <li>Boys mentorship and street children outreach</li>
+            </ul>
+            We publish annual impact reports for all donors who request them.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is my donation tax-deductible?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Tax deductibility depends on your country of residence and applicable local tax law. We recommend consulting a tax adviser in your jurisdiction. We issue donation receipts via email upon request. Austrian donors giving through our Caritas Austria administrative channel may have additional options — please <a href="contact.html">contact us</a> for details.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can I cancel or change a recurring donation?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Yes — you can cancel or modify a recurring (monthly or annual) donation at any time. Simply email <a href="mailto:donations@purejoyempowerment.org">donations@purejoyempowerment.org</a> at least 5 business days before your next billing date. We'll confirm the cancellation by return email.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can I donate in a currency other than USD?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Our online donation form currently processes payments in USD. However, Stripe automatically handles the currency conversion from your card's native currency, so you can donate from anywhere in the world. For Euro-denominated donations through Caritas Austria, please <a href="contact.html">contact us</a>.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can I request a refund on my donation?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            All donations are final. Refunds are only issued in cases of clear processing errors (e.g., duplicate charge or incorrect amount). Refund requests must be submitted within 14 days of the transaction to <a href="mailto:donations@purejoyempowerment.org">donations@purejoyempowerment.org</a>.
+          </div></div>
+        </div>
+      </div>
+
+      <!-- SPONSORSHIP -->
+      <div class="faq-cat" data-cat="sponsorship">
+        <div class="faq-cat-title">Child Sponsorship</div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How does child sponsorship work?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Our child sponsorship programme connects generous donors with a specific child in our care. Your monthly gift covers that child's housing, meals, school fees, healthcare, and emotional support. You will receive a welcome pack with your sponsored child's story, and quarterly photo and progress updates. Visit our <a href="get-involved.html#sponsor">Sponsor a Child</a> page to begin.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How much does it cost to sponsor a child?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            We offer three tiers: <strong>Seed ($25/month)</strong> — meals and basic supplies; <strong>Joy ($50/month)</strong> — full care including school fees and healthcare; <strong>Champion ($100/month)</strong> — full care plus vocational training contribution and a quarterly impact report. All tiers make a meaningful difference.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Will I get updates about the child I sponsor?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Yes. Sponsors receive: a welcome pack with their child's background and photo; school progress updates each term; a birthday message from the child; and an annual report. Champion-tier sponsors receive a quarterly written update. All updates are shared with appropriate consent and child safeguarding considerations.
+          </div></div>
+        </div>
+      </div>
+
+      <!-- VOLUNTEERING -->
+      <div class="faq-cat" data-cat="volunteering">
+        <div class="faq-cat-title">Volunteering</div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How do I apply to volunteer with Pure Joy?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Complete the expression-of-interest form on our <a href="get-involved.html#volunteer">Get Involved</a> page. You can also apply through our volunteer partners: <a href="https://sensemacres.com/" target="_blank" rel="noopener">SenseMacres</a> and <a href="https://www.auslandsdienst.at/en/" target="_blank" rel="noopener">Auslandsdienst Austria</a>. We aim to respond to all applications within 5 business days.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What types of volunteers do you need?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            We actively seek volunteers with expertise in:
+            <ul>
+              <li>Regenerative and organic agriculture / agronomy</li>
+              <li>Textile design and garment production</li>
+              <li>Cosmetic chemistry and natural beauty products</li>
+              <li>Renewable energy engineering (bioethanol, biodiesel, briquettes)</li>
+              <li>Social enterprise strategy and business development</li>
+              <li>Digital marketing, content creation, and fundraising</li>
+              <li>Education and teaching (primary / secondary level)</li>
+            </ul>
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How long are volunteer placements?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Placements typically run 3–12 months. Shorter engagements may be considered for specialist consultants. We find that placements of at least 3 months allow meaningful integration and measurable impact in our programmes.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do I need a visa or work permit to volunteer?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Yes. All international volunteers require a valid Ugandan volunteer or work permit. We provide guidance on the application process and documentation required. Caritas Austria administers permit support for Austrian volunteers; other nationalities should contact us early as processing takes 4–8 weeks.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is accommodation provided for volunteers?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            We provide accommodation support and guidance for long-term volunteers, including connections to trusted local housing near our centre in Jinja City. Accommodation costs and living expenses are the volunteer's responsibility. We provide a detailed pre-arrival briefing covering costs, healthcare, safety, and practical logistics.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">I'm a university student. Can I do my placement with Pure Joy?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Yes — we actively welcome students from universities of applied sciences and similar institutions. We are currently formalising partnerships with European universities for structured student placements. Please <a href="contact.html">contact us</a> with your university, course of study, and desired placement period. We can work with your institution's placement office to establish a formal agreement.
+          </div></div>
+        </div>
+      </div>
+
+      <!-- PROGRAMMES -->
+      <div class="faq-cat" data-cat="programmes">
+        <div class="faq-cat-title">Our Programmes</div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Where do you operate in Uganda?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            We operate across four areas of Eastern Uganda: <strong>Jinja City</strong>, <strong>Jinja District</strong>, <strong>Buikwe</strong>, and <strong>Kayunga</strong>. Our main centre and children's home is located in Jinja City.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How many children live in your orphanage?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Our children's home currently houses over 60 children — orphaned, street-connected, or at-risk youth — in a safe, family-style environment. 95% of children in our care are enrolled in formal schooling. For more information, visit our <a href="orphanage.html">Orphanage page</a>.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What is the 2026–2030 strategy?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Pure Joy is transitioning from traditional vocational training into a <strong>Women-Led Circular Economy and Regenerative Agrocultural Enterprise Hub</strong>. This means linking skills training directly to sustainable market enterprises — biofuels, banana fibre products, natural beauty, clean energy stoves, and school food systems — creating lasting income and environmental resilience for communities in Eastern Uganda. We are not replacing Pure Joy; we are upgrading it.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Who are your key partners?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Our partners include <a href="http://ameliaagro.com" target="_blank" rel="noopener">Amelia Agro</a>, <a href="http://twiga-sunfruits.org" target="_blank" rel="noopener">Twiga Sun Fruits</a>, <a href="https://linkedin.com/company/busoga-flower-food-company" target="_blank" rel="noopener">Busoga Flower Food Company</a>, Maridadi Beauty Care, Saints General Workshop, Bulikimu Tusobola, <a href="https://sensemacres.com/" target="_blank" rel="noopener">SenseMacres</a>, <a href="https://www.auslandsdienst.at/en/" target="_blank" rel="noopener">Auslandsdienst Austria</a>, and <a href="https://www.caritas.at/en/" target="_blank" rel="noopener">Caritas Austria</a>. See our <a href="partners.html">Partners page</a> for full details.
+          </div></div>
+        </div>
+      </div>
+
+      <!-- GENERAL -->
+      <div class="faq-cat" data-cat="general">
+        <div class="faq-cat-title">General</div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How can I contact Pure Joy?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Via our <a href="contact.html">contact form</a>, by email at <a href="mailto:info@purejoyempowerment.org">info@purejoyempowerment.org</a>, or by phone/WhatsApp at <a href="tel:+256782000000">+256 782 000 000</a>. Office hours are Monday–Friday 8:00 AM – 5:00 PM East Africa Time.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is Pure Joy a registered organisation?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Yes. Pure Joy Empowerment Uganda is a legally registered non-governmental organisation in Uganda (Registration Number: PJWEU/2018/JJA). Administrative oversight for our international volunteer programme is provided by Caritas Austria.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How do I sign up for your newsletter?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Scroll to the bottom of our <a href="index.html">homepage</a> or <a href="news.html">news page</a> and enter your email address. We send quarterly impact reports and occasional programme updates. You may unsubscribe at any time via the link in each email.
+          </div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can I visit Pure Joy in Uganda?<span class="faq-arrow" aria-hidden="true">▾</span></button>
+          <div class="faq-a" role="region"><div class="faq-a-inner">
+            Yes — we welcome visitors, prospective volunteers, partners, and journalists. Please arrange visits in advance via our <a href="contact.html">contact form</a> or email. All visitors must comply with our safeguarding and child protection policy, and children may not be photographed without prior written consent from our management team.
+          </div></div>
+        </div>
+      </div>
+
+      <div class="no-results" id="no-results">No questions match your search. <a href="contact.html">Ask us directly →</a></div>
+    </div>
+
+    <div style="background:var(--forest);border-radius:var(--radius-lg);padding:2.5rem;text-align:center;margin-top:3rem;">
+      <h3 style="color:#fff;margin-bottom:.6rem;">Still have a question?</h3>
+      <p style="color:rgba(255,255,255,.75);font-size:.9rem;margin-bottom:1.5rem;">Our team responds within 48 hours.</p>
+      <a href="contact.html" class="btn btn-gold">Contact Us →</a>
+    </div>
+  </div>
+</section>
+
+<script src="js/footer.js"></script>
+<script src="js/main.js"></script>
+<script>
+/* FAQ accordion */
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const item = this.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      this.setAttribute('aria-expanded','true');
+    }
+  });
+});
+/* FAQ search */
+document.getElementById('faq-search').addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  let visible = 0;
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const text = item.textContent.toLowerCase();
+    const show = !q || text.includes(q);
+    item.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  document.querySelectorAll('.faq-cat').forEach(cat => {
+    const anyVisible = [...cat.querySelectorAll('.faq-item')].some(i => i.style.display !== 'none');
+    cat.style.display = anyVisible ? '' : 'none';
+  });
+  document.getElementById('no-results').style.display = visible ? 'none' : 'block';
+});
+</script>
+</body>
+</html>

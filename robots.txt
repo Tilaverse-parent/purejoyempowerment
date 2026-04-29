@@ -1,0 +1,17 @@
+# robots.txt — Pure Joy Empowerment Uganda
+# https://purejoyempowerment.org
+
+User-agent: *
+Allow: /
+
+# Block access to API and config files
+Disallow: /api/
+Disallow: /package.json
+Disallow: /vercel.json
+Disallow: /netlify.toml
+
+# Crawl-delay for considerate bots
+Crawl-delay: 5
+
+# Sitemap location
+Sitemap: https://purejoyempowerment.org/sitemap.xml

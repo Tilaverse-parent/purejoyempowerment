@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "name": "purejoy-empowerment-uganda",
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)\\.html",
+      "dest": "/$1.html"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ],
+  "env": {
+    "STRIPE_SECRET_KEY": "@stripe_secret_key",
+    "ALLOWED_ORIGIN": "@allowed_origin"
+  }
+}

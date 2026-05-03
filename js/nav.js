@@ -9,8 +9,8 @@
   <div class="utility-bar" aria-hidden="true">
     <div class="utility-inner">
       <div class="utility-left">
-        <a href="contact.html"><span>📍</span> Jinja City, Uganda</a>
-        <a href="tel:+256782000000"><span>📞</span> +256 782 000 000</a>
+        <a href="contact.html"><span>📍</span> Kagoma Hill, Kagoma-Central, Kagoma Parish, Buwenge Sub Country, P.O. Box 800, Jinja City, Uganda</a>
+        <a href="tel:+256752708535"><span>📞</span> +256 752 708 535 </a>
         <a href="mailto:info@purejoyempowerment.org"><span>✉</span> info@purejoyempowerment.org</a>
       </div>
       <div class="utility-right">

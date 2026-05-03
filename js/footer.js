@@ -50,11 +50,11 @@
         <div class="footer-contact">
           <div class="footer-contact-row">
             <span class="fc-icon">📍</span>
-            <span>Jinja City, Jinja District, Buikwe &amp; Kayunga, Eastern Uganda</span>
+            <span>Kagoma Hill, Kagoma-Central, Kagoma Parish, Buwenge Sub Country, P.O. Box 800, Jinja City, Uganda</span>
           </div>
           <div class="footer-contact-row">
             <span class="fc-icon">📞</span>
-            <a href="tel:+256782000000" style="color:inherit">+256 782 000 000</a>
+            <a href="tel:+256752708535" style="color:inherit">+256 752 708 535</a>
           </div>
           <div class="footer-contact-row">
             <span class="fc-icon">✉</span>
